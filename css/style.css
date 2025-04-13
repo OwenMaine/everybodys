@@ -5,7 +5,7 @@ html {
 body {
   font-family: "Poppins", sans-serif;
   color: #0c0c0c;
-  background-color: #ffffff;
+  background-color: #c95f5f;
 }
 
 .layout_padding {
@@ -66,21 +66,27 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  /* Add a background image or gradient to the hero area */
+  background: url("../images/hero-bg.jpg") center/cover no-repeat; /* Replace with your image */
+  color: #fff; /* Adjust text color for better visibility */
 }
 
 .sub_page .hero_area {
   height: auto;
   background: none;
-  background-color: #371e71;
+  background-color: #2980b9; /* A more modern color */
+  color: #fff;
 }
 
 .header_section {
-  background: -webkit-gradient(linear, left top, right top, color-stop(50%, #18191e), color-stop(50%, #f7f7fb));
-  background: linear-gradient(to right, #18191e 50%, #f7f7fb 50%);
+  /* Change the background to a solid color or a more subtle gradient */
+  background: #2c3e50; /* A dark, modern color */
+  /* Add a subtle box shadow */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .header_section .container {
-  padding: 0;
+  padding: 15px 0; /* Add some padding to the container */
 }
 
 .header_section .nav_container {
@@ -88,11 +94,17 @@ body {
 }
 
 .custom_nav-container .navbar-nav .nav-item .nav-link {
-  padding: 15px 30px;
+  padding: 10px 25px; /* Slightly reduce padding */
   text-align: center;
   text-transform: uppercase;
-  font-size: 15px;
-  color: #000000;
+  font-size: 14px; /* Slightly smaller font size */
+  color: #fff; /* White text for better contrast on the dark background */
+  transition: all 0.3s ease; /* Add a smooth transition for hover effects */
+}
+
+.custom_nav-container .navbar-nav .nav-item .nav-link:hover,
+.custom_nav-container .navbar-nav .nav-item .nav-link:focus {
+    color: #f1c40f; /* A gold color for hover effect */
 }
 
 a,
@@ -103,7 +115,7 @@ a:focus {
 
 a:hover,
 a:focus {
-  color: initial;
+  color: #f1c40f;
 }
 
 .btn,
@@ -114,7 +126,7 @@ a:focus {
 }
 
 .custom_nav-container .nav_search-btn {
-  background-image: url(../images/search-icon.png);
+  background-image: url(../images/search-icon-white.png); /* Change search icon to white */
   background-size: 22px;
   background-repeat: no-repeat;
   background-position-y: 7px;
@@ -125,9 +137,9 @@ a:focus {
 }
 
 .navbar-brand span {
-  font-size: 24px;
+  font-size: 28px; /* Slightly larger brand name */
   font-weight: 700;
-  color: #ffffff;
+  color: #fff; /* White brand name */
   text-transform: uppercase;
 }
 
@@ -190,25 +202,33 @@ a:focus {
 /* slider section */
 .slider_section {
   -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  -ms-flex: 1;
+  flex: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   position: relative;
   z-index: 2;
-  color: #3b3a3a;
-  background: -webkit-gradient(linear, left top, right top, color-stop(50%, #f7f7fb), color-stop(50%, #18191e));
-  background: linear-gradient(to right, #f7f7fb 50%, #18191e 50%);
+  color: #fff; /* Changed text color to white */
+  /* Changed background to a single color with a subtle gradient overlay */
+  background: #34495e; /* A dark blue-gray color */
+  /* Create a subtle gradient overlay */
+  background: linear-gradient(
+    to bottom,
+    rgba(52, 73, 94, 0.8), /* Darker overlay */
+    rgba(52, 73, 94, 0.2)  /* Lighter overlay */
+  );
+  padding: 50px 0; /* Add some padding */
+  overflow: hidden; /* Hide anything that overflows */
 }
 
 .slider_section .row {
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .slider_section .detail_box {
@@ -217,39 +237,52 @@ a:focus {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start;
   color: #ffffff;
+  padding-left: 5%; /* Add some left padding */
 }
 
 .slider_section .detail_box h1 {
   text-transform: uppercase;
   font-weight: bold;
-  font-size: 3rem;
-  border-right: 1.5px solid #ffffff;
-  padding-right: 45px;
+  font-size: 3.5rem; /* Increased font size */
+  /* Removed border-right */
+  /* padding-right: 45px; */
+  margin-bottom: 15px; /* Add some margin below the heading */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a text shadow */
 }
 
 .slider_section .detail_box p {
   margin-top: 20px;
+  font-size: 1.1rem; /* Slightly larger paragraph text */
+  line-height: 1.6; /* Improve line height for readability */
+  color: #ecf0f1; /* A slightly lighter text color */
 }
 
 .slider_section .detail_box a {
   display: inline-block;
-  padding: 10px 45px;
-  background-color: transparent;
-  color: #e7c357;
-  border: 1px solid #e7c357;
-  border-radius: 5px;
-  margin-top: 35px;
+  padding: 12px 50px; /* Adjusted padding */
+  background-color: #f39c12; /* A more vibrant button color */
+  color: #fff; /* White text color */
+  border: none; /* Removed border */
+  border-radius: 8px; /* More rounded corners */
+  margin-top: 40px;
+  font-weight: 600; /* Make the font bold */
+  text-transform: uppercase; /* Uppercase text */
+  letter-spacing: 1px; /* Add letter spacing */
+  transition: all 0.3s ease; /* Add a smooth transition */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Add a shadow */
 }
 
 .slider_section .detail_box a:hover {
-  background-color: #e7c357;
-  color: #000000;
+  background-color: #e67e22; /* A slightly darker button color */
+  /* color: #000000; */
+  transform: translateY(-2px); /* Slight move up */
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.4); /* Bigger shadow */
 }
 
 .slider_section .img-box {
@@ -257,15 +290,41 @@ a:focus {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-right: 5%; /* Add some right padding */
 }
 
 .slider_section .img-box img {
-  width: 65%;
+  width: 75%; /* Increased image size */
+  -webkit-animation: rotate 10s linear infinite;
+          animation: rotate 10s linear infinite; /* Add a subtle rotation animation */
+}
+
+/* Keyframes for rotation animation */
+@-webkit-keyframes rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
 }
 
 .slider_section .slider_number-container {
@@ -275,46 +334,84 @@ a:focus {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  /* Add a background color for the number */
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.about_section {
+  padding: 60px 0; /* Increased padding for more spacing */
+  background-color: #f9f9f9; /* A light gray background */
 }
 
 .about_section .row {
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.about_section .img-box {
+  /* Add a subtle shadow to the image box */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px; /* Rounded corners for the image */
+  overflow: hidden; /* Ensure the image doesn't overflow the rounded corners */
 }
 
 .about_section .img-box img {
   width: 100%;
+  transition: transform 0.3s ease; /* Add a smooth transition for scaling */
+}
+
+.about_section .img-box:hover img {
+  transform: scale(1.1); /* Scale the image on hover */
+}
+
+.about_section .detail-box {
+  padding: 30px; /* Add padding to the detail box */
 }
 
 .about_section .detail-box p {
-  margin-top: 25px;
-  color: #676767;
+  margin-top: 30px; /* Increased margin */
+  color: #555; /* Darker text color for better readability */
+  font-size: 1.1rem; /* Slightly larger font size */
+  line-height: 1.7; /* Improved line height */
 }
 
 .about_section .detail-box a {
   display: inline-block;
-  padding: 10px 35px;
-  background-color: #18191e;
-  color: #ffffff;
-  border: 1px solid #18191e;
-  border-radius: 5px;
-  margin-top: 25px;
+  padding: 12px 40px; /* Adjusted padding */
+  background-color: #3498db; /* A bright blue button color */
+  color: #fff; /* White text */
+  border: none; /* Remove border */
+  border-radius: 8px; /* Rounded corners */
+  margin-top: 35px;
+  font-weight: 600; /* Bold font */
+  text-transform: uppercase; /* Uppercase text */
+  letter-spacing: 0.5px; /* Letter spacing */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Add a shadow */
+  transition: all 0.3s ease; /* Transition for hover */
 }
 
 .about_section .detail-box a:hover {
-  background-color: transparent;
-  color: #18191e;
+  background-color: #2980b9; /* Darker blue on hover */
+  color: #fff; /* Keep text white */
+  transform: translateY(-2px); /* Move up slightly */
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3); /* Larger shadow on hover */
 }
 
 .service_section {
   text-align: center;
+  padding: 60px 0; /* Add padding to the top and bottom */
+  background-color: #ecf0f1; /* A light background color */
 }
 
 .service_section .heading_container {
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin-bottom: 40px; /* Add margin below the heading */
 }
 
 .service_section .service_container {
@@ -322,50 +419,50 @@ a:focus {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  padding-top: 45px;
+  -ms-flex-pack: center;
+  justify-content: center;
+  padding-top: 0; /* Remove padding */
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .service_section .service_container .box {
-  margin: 25px 0.5% 0 0.5%;
-  -ms-flex-preferred-size: 22%;
-      flex-basis: 22%;
-  border: 1px solid #d7d6d6;
-  padding: 45px 25px 25px;
-  background-size: cover;
+  margin: 25px 1%; /* Adjust margins */
+  -ms-flex-preferred-size: 23%; /* Adjust flex basis */
+  flex-basis: 23%;
+  /* Remove border */
+  /* border: 1px solid #d7d6d6; */
+  padding: 30px; /* Adjust padding */
+  /* Remove background image */
+  /* background-size: cover; */
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #fff; /* White background for the boxes */
+  border-radius: 10px; /* Add rounded corners */
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
 }
 
-.service_section .service_container .box.b1 {
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(24, 25, 30, 0.95)), to(rgba(24, 25, 30, 0.95))), url(../images/s1-bg.jpg);
-  background-image: linear-gradient(to right, rgba(24, 25, 30, 0.95), rgba(24, 25, 30, 0.95)), url(../images/s1-bg.jpg);
+.service_section .service_container .box:hover {
+  transform: translateY(-5px); /* Move up slightly on hover */
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
 }
 
-.service_section .service_container .box.b2 {
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(24, 25, 30, 0.95)), to(rgba(24, 25, 30, 0.95))), url(../images/s2-bg.jpg);
-  background-image: linear-gradient(to right, rgba(24, 25, 30, 0.95), rgba(24, 25, 30, 0.95)), url(../images/s2-bg.jpg);
-}
-
-.service_section .service_container .box.b3 {
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(24, 25, 30, 0.95)), to(rgba(24, 25, 30, 0.95))), url(../images/s3-bg.jpg);
-  background-image: linear-gradient(to right, rgba(24, 25, 30, 0.95), rgba(24, 25, 30, 0.95)), url(../images/s3-bg.jpg);
-}
-
+/*Remove the background images*/
+.service_section .service_container .box.b1,
+.service_section .service_container .box.b2,
+.service_section .service_container .box.b3,
 .service_section .service_container .box.b4 {
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(24, 25, 30, 0.95)), to(rgba(24, 25, 30, 0.9))), url(../images/s4-bg.jpg);
-  background-image: linear-gradient(to right, rgba(24, 25, 30, 0.95), rgba(24, 25, 30, 0.9)), url(../images/s4-bg.jpg);
+  background-image: none;
 }
 
 .service_section .service_container .box .img-box {
@@ -373,62 +470,93 @@ a:focus {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 100px;
-  height: 100px;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 120px; /* Increase size */
+  height: 120px; /* Increase size */
+  margin-bottom: 20px; /* Add margin below the image */
 }
 
 .service_section .service_container .box .img-box img {
-  width: 75px;
+  width: 90px; /* Increase image size */
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+/* Add a hover effect to the images */
+.service_section .service_container .box:hover .img-box img {
+  transform: scale(1.1);
 }
 
 .service_section .service_container .box .detail-box {
-  margin-top: 25px;
+  margin-top: 0; /* Remove margin */
 }
 
 .service_section .service_container .box .detail-box h5 {
-  color: #e7c357;
-  font-weight: 600;
+  color: #3498db; /* A modern color */
+  font-weight: 700; /* More bold */
   position: relative;
+  font-size: 1.3rem; /* Increase font size */
+  margin-bottom: 10px; /* Add margin */
 }
 
 .service_section .service_container .box .detail-box p {
-  color: #ffffff;
+  color: #777; /* Darker text color */
   margin-top: 15px;
+  font-size: 1.1rem; /* Increase font size */
+  line-height: 1.6; /* Improve line height */
 }
 
 .service_section .service_container .box .detail-box a {
   display: inline-block;
-  padding: 8px 35px;
-  background-color: transparent;
-  color: #e7c357;
-  border: 1px solid #e7c357;
-  border-radius: 5px;
+  padding: 10px 40px; /* Adjust padding */
+  background-color: #3498db; /* A modern button color */
+  color: #fff; /* White text */
+  border: none; /* Remove border */
+  border-radius: 8px; /* Rounded corners */
   margin-top: 25px;
+  font-weight: 600; /* Bold font */
+  text-transform: uppercase; /* Uppercase text */
+  letter-spacing: 0.5px; /* Letter spacing */
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
 }
 
 .service_section .service_container .box .detail-box a:hover {
-  background-color: #e7c357;
-  color: #000000;
+  background-color: #2980b9; /* Darker color on hover */
+  color: #fff; /* Keep text white */
+  transform: translateY(-2px); /* Move up slightly */
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Increase shadow */
+}
+
+.help_section {
+  padding: 70px 0; /* Add padding to the top and bottom */
+  background-color: #34495e; /* A dark background color */
 }
 
 .help_section .help_container {
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(24, 25, 30, 0.95)), to(rgba(24, 25, 30, 0.95))), url(../images/help_bg.jpg);
-  background-image: linear-gradient(to right, rgba(24, 25, 30, 0.95), rgba(24, 25, 30, 0.95)), url(../images/help_bg.jpg);
+  /* Remove background image and gradient */
+  /* background-image: -webkit-gradient(linear, left top, right top, from(rgba(24, 25, 30, 0.95)), to(rgba(24, 25, 30, 0.95))), url(../images/help_bg.jpg); */
+  /* background-image: linear-gradient(to right, rgba(24, 25, 30, 0.95), rgba(24, 25, 30, 0.95)), url(../images/help_bg.jpg); */
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: 50px; /* Add padding to the container */
+  border-radius: 15px; /* Add rounded corners */
+  background-color: rgba(255, 255, 255, 0.1); /* Add a semi-transparent background */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add a subtle shadow */
+  color: #fff; /* Set text color to white */
 }
 
 .help_section .help_container .detail-box {
@@ -436,184 +564,165 @@ a:focus {
 }
 
 .help_section .help_container .detail-box h2 {
-  color: #e4c056;
+  color: #f1c40f; /* A gold color */
   font-weight: bold;
+  font-size: 2.5rem; /* Increase font size */
+  margin-bottom: 15px; /* Add margin below the heading */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add a text shadow */
 }
 
 .help_section .help_container .detail-box h6 {
-  color: #ffffff;
+  color: #ecf0f1; /* A light text color */
   margin-top: 25px;
+  font-size: 1.2rem; /* Increase font size */
+  line-height: 1.7; /* Improve line height */
 }
 
 .help_section .help_container .detail-box a {
   display: inline-block;
-  padding: 8px 35px;
-  background-color: transparent;
-  color: #e7c357;
-  border: 1px solid #e7c357;
-  border-radius: 5px;
+  padding: 12px 40px; /* Adjust padding */
+  background-color: #f39c12; /* A vibrant button color */
+  color: #fff; /* White text */
+  border: none; /* Remove border */
+  border-radius: 8px; /* Rounded corners */
   margin-top: 35px;
+  font-weight: 600; /* Bold font */
+  text-transform: uppercase; /* Uppercase text */
+  letter-spacing: 0.5px; /* Letter spacing */
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
 }
 
 .help_section .help_container .detail-box a:hover {
-  background-color: #e7c357;
-  color: #000000;
+  background-color: #e67e22; /* Darker color on hover */
+  color: #fff; /* Keep text white */
+  transform: translateY(-2px); /* Move up slightly */
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3); /* Increase shadow */
 }
 
-.client_section {
-  background-color: #292a2e;
-  color: #ffffff;
+.contact_section {
+  padding: 60px 0; /* Add padding to the top and bottom */
+  background-color: #f9f9f9; /* A light background color */
 }
 
-.client_section .heading_container {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+.contact_section .contact_form-container {
+  padding: 30px; /* Add padding to the form container */
+  background-color: #fff; /* White background for the form */
+  border-radius: 10px; /* Add rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
 }
 
-.client_section .client_container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin-bottom: 75px;
-}
-
-.client_section .box {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin: 10px;
-  margin-top: 45px;
-  text-align: center;
-  min-width: 285px;
-}
-
-.client_section .box .img-box {
-  margin-bottom: -60px;
-  position: relative;
-  z-index: 2;
-  width: 120px;
-  height: 120px;
-  border-radius: 100%;
-  overflow: hidden;
-  border: 1px solid #e4c156;
-}
-
-.client_section .box .img-box img {
-  width: 100%;
-}
-
-.client_section .box .detail-box {
-  padding: 90px 20px 35px;
-  border: 1px solid #e4c156;
-}
-
-.client_section .box .detail-box h5 {
-  color: #e7c357;
-}
-
-.client_section .carousel-indicators {
-  bottom: 0;
-  margin: 0;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.client_section .carousel-indicators li {
-  opacity: 1;
-  background-color: #d5d6d7;
-  width: 18px;
-  height: 18px;
-  border-radius: 100%;
-}
-
-.client_section .carousel-indicators li.active {
-  background-color: #e4c156;
-}
-
-/* contact section */
-.contact_section .contact_form-container input {
+.contact_section .contact_form-container input,
+.contact_section .contact_form-container textarea {
   border: none;
   outline: none;
-  border-bottom: 1px solid #000;
-  width: 90%;
-  margin: 15px 0;
-  background-color: transparent;
+  border-bottom: 2px solid #bdc3c7; /* A light gray border */
+  width: 100%; /* Make inputs full width */
+  margin: 20px 0; /* Adjust margin */
+  padding: 10px; /* Add padding to the inputs */
+  background-color: #f0f0f0; /* A light gray background */
+  border-radius: 5px; /* Add rounded corners */
+  font-size: 16px; /* Increase font size */
+  color: #333; /* Darker text color */
+  transition: border-bottom-color 0.3s ease; /* Add a transition */
 }
 
-.contact_section .contact_form-container input::-webkit-input-placeholder {
-  color: #595959;
-  font-size: 14px;
+.contact_section .contact_form-container input:focus,
+.contact_section .contact_form-container textarea:focus {
+  border-bottom-color: #3498db; /* Change border color on focus */
 }
 
-.contact_section .contact_form-container input:-ms-input-placeholder {
-  color: #595959;
-  font-size: 14px;
+.contact_section .contact_form-container input::-webkit-input-placeholder,
+.contact_section .contact_form-container textarea::-webkit-input-placeholder {
+  color: #777; /* Darker placeholder color */
+  font-size: 16px; /* Increase font size */
 }
 
-.contact_section .contact_form-container input::-ms-input-placeholder {
-  color: #595959;
-  font-size: 14px;
+.contact_section .contact_form-container input:-ms-input-placeholder,
+.contact_section .contact_form-container textarea:-ms-input-placeholder {
+  color: #777; /* Darker placeholder color */
+  font-size: 16px; /* Increase font size */
 }
 
-.contact_section .contact_form-container input::placeholder {
-  color: #595959;
-  font-size: 14px;
+.contact_section .contact_form-container input::-ms-input-placeholder,
+.contact_section .contact_form-container textarea::-ms-input-placeholder {
+  color: #777; /* Darker placeholder color */
+  font-size: 16px; /* Increase font size */
+}
+
+.contact_section .contact_form-container input::placeholder,
+.contact_section .contact_form-container textarea::placeholder {
+  color: #777; /* Darker placeholder color */
+  font-size: 16px; /* Increase font size */
+}
+
+.contact_section .contact_form-container textarea {
+  height: 150px; /* Increase the height of the textarea */
+  resize: vertical; /* Allow vertical resizing */
 }
 
 .contact_section .contact_form-container input.message_input {
-  margin-top: 80px;
+  margin-top: 20px; /* Reset margin */
 }
 
 .contact_section .contact_form-container button {
   display: inline-block;
-  padding: 8px 35px;
-  background-color: #18191e;
-  color: #ffffff;
-  border: 1px solid #18191e;
-  border-radius: 5px;
-  font-size: 15px;
+  padding: 12px 40px; /* Adjust padding */
+  background-color: #3498db; /* A modern button color */
+  color: #fff; /* White text */
+  border: none; /* Remove border */
+  border-radius: 8px; /* Rounded corners */
+  font-size: 18px; /* Increase font size */
+  font-weight: 600; /* Bold font */
+  text-transform: uppercase; /* Uppercase text */
+  letter-spacing: 0.5px; /* Letter spacing */
+  transition: all 0.3s ease; /* Add a transition */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  cursor: pointer; /* Add a pointer cursor */
 }
 
 .contact_section .contact_form-container button:hover {
-  background-color: transparent;
-  color: #18191e;
+  background-color: #2980b9; /* Darker color on hover */
+  color: #fff; /* Keep text white */
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Increase shadow */
+  transform: translateY(-2px); /* Move up slightly */
+}
+
+.contact_section .img-box {
+  text-align: center; /* Center the image */
 }
 
 .contact_section .img-box img {
-  width: 100%;
+  width: 80%; /* Adjust image width */
+  border-radius: 10px; /* Add rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
 }
-
 /* end contact section */
 .footer_bg {
-  background-image: url(../images/footer-bg.png);
+  /* Remove the background image */
+  /* background-image: url(../images/footer-bg.png); */
+  background-color: #2c3e50; /* A dark background color */
+  /* Set background-size to cover */
   background-size: cover;
+  /* Set background-position to top */
   background-position: top;
+  padding: 50px 0; /* Add padding to the top and bottom */
 }
 
 .info_section {
-  background-color: #202021;
+  background-color: #34495e; /* A slightly lighter dark color */
   color: #ffffff;
+  padding: 50px 0; /* Add padding to the top and bottom */
 }
 
 .info_section h5 {
   text-transform: uppercase;
+  color: #f1c40f; /* A gold color for the heading */
+  font-weight: bold; /* Make the heading bold */
+  font-size: 1.5rem; /* Increase font size */
+  margin-bottom: 20px; /* Add margin below the heading */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Add a text shadow */
 }
 
 .info_section .info_form form {
@@ -622,11 +731,11 @@ a:focus {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   margin-top: 25px;
 }
 
@@ -636,36 +745,70 @@ a:focus {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 .info_section .info_form form label {
-  color: #5a5959;
+  color: #bdc3c7; /* A light gray color */
+  margin-bottom: 5px; /* Add margin below the label */
 }
 
 .info_section .info_form form input {
-  width: 500px;
+  width: 100%; /* Make the input full width */
+  max-width: 500px; /* Limit the maximum width */
   border: none;
-  background-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.1); /* A semi-transparent background */
   outline: none;
-  padding: 7px 5px;
+  padding: 12px 15px; /* Adjust padding */
+  border-radius: 8px; /* Add rounded corners */
+  color: #fff; /* Set text color to white */
+  font-size: 1rem; /* Increase font size */
+  margin-bottom: 15px; /* Add margin below the input */
+  transition: background-color 0.3s ease; /* Add a transition */
+}
+
+.info_section .info_form form input:focus {
+  background-color: rgba(255, 255, 255, 0.3); /* Change background color on focus */
+}
+
+.info_section .info_form form input::-webkit-input-placeholder {
+  color: #95a5a6; /* A lighter placeholder color */
+}
+
+.info_section .info_form form input:-ms-input-placeholder {
+  color: #95a5a6; /* A lighter placeholder color */
+}
+
+.info_section .info_form form input::-ms-input-placeholder {
+  color: #95a5a6; /* A lighter placeholder color */
+}
+
+.info_section .info_form form input::placeholder {
+  color: #95a5a6; /* A lighter placeholder color */
 }
 
 .info_section .info_form form button {
-  padding: 10px 55px;
+  padding: 12px 55px; /* Adjust padding */
   outline: none;
-  border: 1px solid #f2c744;
-  border-radius: 5px;
-  color: #2f2f31;
-  background: #f2c744;
-  margin-top: 35px;
+  border: none; /* Remove border */
+  border-radius: 8px; /* Add rounded corners */
+  color: #fff; /* Set text color to white */
+  background: #f39c12; /* A vibrant button color */
+  margin-top: 25px; /* Adjust margin */
   text-transform: uppercase;
+  font-weight: 600; /* Make the font bold */
+  letter-spacing: 0.5px; /* Add letter spacing */
+  transition: all 0.3s ease; /* Add a transition */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+  cursor: pointer; /* Add a pointer cursor */
 }
 
 .info_section .info_form form button:hover {
-  background-color: transparent;
-  color: #f2c744;
+  background-color: #e67e22; /* Darker color on hover */
+  color: #fff; /* Keep text color white */
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3); /* Increase shadow */
+  transform: translateY(-2px); /* Move up slightly */
 }
 
 .info_section .info_social {
@@ -675,11 +818,11 @@ a:focus {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .info_section .info_social .social_box {
@@ -688,31 +831,47 @@ a:focus {
   display: flex;
   margin: 15px auto;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.info_section .info_social .social_box a {
+  margin: 0 15px; /* Adjust margin */
+  transition: transform 0.3s ease; /* Add a transition */
+  display: inline-block; /* To apply transition */
+}
+
+.info_section .info_social .social_box a:hover {
+  transform: scale(1.2); /* Scale up on hover */
 }
 
 .info_section .info_social .social_box img {
-  min-width: 10px;
-  margin: 0 10px;
+  min-width: 30px; /* Increase the size of the icons */
+  margin: 0; /* Remove margin */
+  display: block; /* Remove extra space below image */
 }
 
 /* footer section*/
 .footer_section {
-  background-color: #202021;
+  background-color: #2c3e50; /* A dark background color */
   position: relative;
+  padding: 20px 0; /* Add padding to the top and bottom */
 }
 
 .footer_section p {
-  border-top: 1px solid #ffffff;
-  color: #9c9b9b;
+  border-top: 1px solid rgba(255, 255, 255, 0.1); /* A subtle white border */
+  color: #bdc3c7; /* A light gray color */
   margin: 0;
   text-align: center;
   padding: 15px;
-  margin: 0;
 }
 
 .footer_section a {
-  color: #9c9b9b;
+  color: #bdc3c7; /* A light gray color */
+  transition: color 0.3s ease; /* Add a transition */
+}
+
+.footer_section a:hover {
+  color: #f1c40f; /* A gold color on hover */
 }
 /*# sourceMappingURL=style.css.map */
